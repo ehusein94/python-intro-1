@@ -17,3 +17,35 @@ str1="y"+str1[1:]
 print(str1)
 str2=str1[0:2]+"mm"+str1[4:]
 print(str2)
+
+if num1 %2 ==0 and nim1 %3 == 0:
+     print('not prime')
+elif num1 % num1 == 1 and num1 % 1 == num1:
+    print('prime')
+
+num1=int(input(Entar a number))
+if num1==1:
+
+try:
+    summation += int(n)
+    list3[list3.index(n)] = float(n)
+
+  except valeue Error:
+      print('nota number')
+      list3.remove(n)
+      print(n)
+
+print(list3)
+maxi=max(list3)
+mini=min(list3)
+print('sum=', summation)
+
+studant={'name':'','age':0, 'country':'', 'city':'', 'job':'', 'skills':[],'prant':{'father':'','mother':''}}
+
+print(student) 
+for i in student
+
+       studnet[i] = input ('enter the ' + i + ':')
+
+
+    
