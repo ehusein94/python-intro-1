@@ -1,54 +1,54 @@
-var1="value"
-# print(var1[-2])
-# print(var1[1: ])
-# print(len(var1))
-# print(type(var1))
-# var2=10
-# print(type(var2))
-# var3=True
-# print(type(var3))
-# var4=2.78
-# print(type(var4))
-# comp=complex(8+4j)
-# print(type(comp))
-# print(var1,var2,var3,var4,comp)
-str1="hello"
-str1="y"+str1[1:]
-print(str1)
-str2=str1[0:2]+"mm"+str1[4:]
-print(str2)
+# var1="value"
+# # print(var1[-2])
+# # print(var1[1: ])
+# # print(len(var1))
+# # print(type(var1))
+# # var2=10
+# # print(type(var2))
+# # var3=True
+# # print(type(var3))
+# # var4=2.78
+# # print(type(var4))
+# # comp=complex(8+4j)
+# # print(type(comp))
+# # print(var1,var2,var3,var4,comp)
+# str1="hello"
+# str1="y"+str1[1:]
+# print(str1)
+# str2=str1[0:2]+"mm"+str1[4:]
+# print(str2)
 
-if num1 %2 ==0 and nim1 %3 == 0:
-     print('not prime')
-elif num1 % num1 == 1 and num1 % 1 == num1:
-    print('prime')
+# if num1 %2 ==0 and nim1 %3 == 0:
+#      print('not prime')
+# elif num1 % num1 == 1 and num1 % 1 == num1:
+#     print('prime')
 
-num1=int(input(Entar a number))
-if num1==1:
+# num1=int(input(Entar a number))
+# if num1==1:
 
-try:
-    summation += int(n)
-    list3[list3.index(n)] = float(n)
+# try:
+#     summation += int(n)
+#     list3[list3.index(n)] = float(n)
 
-  except valeue Error:
-      print('nota number')
-      list3.remove(n)
-      print(n)
+#   except valeue Error:
+#       print('nota number')
+#       list3.remove(n)
+#       print(n)
 
-print(list3)
-maxi=max(list3)
-mini=min(list3)
-print('sum=', summation)
+# print(list3)
+# maxi=max(list3)
+# mini=min(list3)
+# print('sum=', summation)
 
-studant={'name':'','age':0, 'country':'', 'city':'', 'job':'', 'skills':[],'prant':{'father':'','mother':''}}
+# studant={'name':'','age':0, 'country':'', 'city':'', 'job':'', 'skills':[],'prant':{'father':'','mother':''}}
 
-print(student) 
-for i in student
-if type(student[i]) == int
-       studnet[i] = input ('enter the ' + i + ':'))
+# print(student) 
+# for i in student
+# if type(student[i]) == int
+#        studnet[i] = input ('enter the ' + i + ':'))
 
-elif type(student[i]) == list:
-times = int(input('how many skills do you hav'))
+# elif type(student[i]) == list:
+# times = int(input('how many skills do you hav'))
 
 
     
@@ -160,3 +160,38 @@ times = int(input('how many skills do you hav'))
 # print('Index of max. value', list3.index(max(list3)))
 # print('Index of min. value', list3.index(min(list3)))
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+students=[]
+student={}
+
+reinter=True
+while reinter:
+    insertTime=int(input('how many key do you want to add?'))
+    for i in range(insertTime):
+     deckey=input('enter the key')
+     decvaluetype=int(input('enter the type of the value where 1 foor str 2 for int 3 for list and 4 for dectionary'))
+     if decvaluetype==1:
+         decvalue=input('enter the value:')
+     elif decvaluetype==2:
+      decvalue=int(input('enter the value:'))
+     elif decvaluetype==3:
+      decvalue=[]
+      times=int(input('how many'+ deckey +'o you have?'))
+      for j in range(times):
+            decvalue.append(input('enter the value'+deckey+':'))
+     elif decvaluetype==4:
+      decvalue={}
+      times=int(input('how many'+deckey+'do you have'))
+      for m in range(times):
+             keynew=input('enter the key:')
+             newvalue=input('enter the value')
+             decvalue[keynew]=newvalue
+      student[deckey]=decvalue 
+      students.append(student)
+      continue0rnot=input('do you want to add another student?')
+      if continue0rnot =='no':
+         reinter=False
+
+    print(students)
+          
+             
