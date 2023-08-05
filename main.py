@@ -161,37 +161,41 @@
 # print('Index of min. value', list3.index(min(list3)))
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-students=[]
-student={}
+students = []
 
-reinter=True
+reinter = True
 while reinter:
-    insertTime=int(input('how many key do you want to add?'))
-    for i in range(insertTime):
-     deckey=input('enter the key')
-     decvaluetype=int(input('enter the type of the value where 1 foor str 2 for int 3 for list and 4 for dectionary'))
-     if decvaluetype==1:
-         decvalue=input('enter the value:')
-     elif decvaluetype==2:
-      decvalue=int(input('enter the value:'))
-     elif decvaluetype==3:
-      decvalue=[]
-      times=int(input('how many'+ deckey +'o you have?'))
+  student = {}
+  insertTime = int(input('how many key do you want to add?'))
+  for i in range(insertTime):
+    deckey = input('enter the key')
+    decvaluetype = int(
+      input(
+        'enter the type of the value where 1 foor str 2 for int 3 for list and 4 for dectionary'
+      ))
+    if decvaluetype == 1:
+      decvalue = input('enter the value:')
+    elif decvaluetype == 2:
+      decvalue = int(input('enter the value:'))
+    elif decvaluetype == 3:
+      decvalue = []
+      times = int(input('how many' + deckey + 'o you have?'))
       for j in range(times):
-            decvalue.append(input('enter the value'+deckey+':'))
-     elif decvaluetype==4:
-      decvalue={}
-      times=int(input('how many'+deckey+'do you have'))
+        decvalue.append(input('enter the value' + deckey + ':'))
+    elif decvaluetype == 4:
+      decvalue = {}
+      times = int(input('how many' + deckey + 'do you have'))
       for m in range(times):
-             keynew=input('enter the key:')
-             newvalue=input('enter the value')
-             decvalue[keynew]=newvalue
-      student[deckey]=decvalue 
-      students.append(student)
-      continue0rnot=input('do you want to add another student?')
-      if continue0rnot =='no':
-         reinter=False
+        keynew = input('enter the key:')
+        newvalue = input('enter the value')
+        decvalue[keynew] = newvalue
+    student[deckey] = decvalue
+    anyvar = student
+    students.append(student)
+    continue0rnot = input('do you want to add another student?')
+    if continue0rnot == 'no':
+      reinter = False
 
-    print(students)
+print(students)
           
              
