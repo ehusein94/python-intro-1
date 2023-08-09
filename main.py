@@ -198,4 +198,31 @@ while reinter:
 
 print(students)
           
-            
+class client:
+
+  def_init_(self, nameopj ='deafult', phoneopj=123456789, Emaiopj=, "mohd@gmail.com", puropj=5)
+  self.name = nameopj
+  self.phone = phoneopj 
+  self.email = Emailopj
+  self.purchies = propj
+
+  def_ str_(self):
+  print('hello')
+  return f'name is {self.name} and phone is {self phone} and mail is{self. email} and purchie'
+
+
+print ('hi to my program ')
+name = input('enter your name:') 
+age = int(input('enter your age:'))
+grade = int(input ('enter your grade:'))
+city = input('enter your city:')
+speacialise = input ('enter your speacialise')
+# pass the user input to the class
+student1= student(name,age,grade, city,speacialise)
+print('information added successfully')
+#added new course to the student course method 
+print("add new course ")
+course= input (enter the course name:')
+print(student1.addcorse(course))
+print(student1)
+          
