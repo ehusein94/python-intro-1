@@ -161,68 +161,127 @@
 # print('Index of min. value', list3.index(min(list3)))
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-students = []
+# students = []
 
-reinter = True
-while reinter:
-  student = {}
-  insertTime = int(input('how many key do you want to add?'))
-  for i in range(insertTime):
-    deckey = input('enter the key')
-    decvaluetype = int(
-      input(
-        'enter the type of the value where 1 foor str 2 for int 3 for list and 4 for dectionary'
-      ))
-    if decvaluetype == 1:
-      decvalue = input('enter the value:')
-    elif decvaluetype == 2:
-      decvalue = int(input('enter the value:'))
-    elif decvaluetype == 3:
-      decvalue = []
-      times = int(input('how many' + deckey + 'o you have?'))
-      for j in range(times):
-        decvalue.append(input('enter the value' + deckey + ':'))
-    elif decvaluetype == 4:
-      decvalue = {}
-      times = int(input('how many' + deckey + 'do you have'))
-      for m in range(times):
-        keynew = input('enter the key:')
-        newvalue = input('enter the value')
-        decvalue[keynew] = newvalue
-    student[deckey] = decvalue
-    anyvar = student
-    students.append(student)
-    continue0rnot = input('do you want to add another student?')
-    if continue0rnot == 'no':
-      reinter = False
+# reinter = True
+# while reinter:
+#   student = {}
+#   insertTime = int(input('how many key do you want to add?'))
+#   for i in range(insertTime):
+#     deckey = input('enter the key')
+#     decvaluetype = int(
+#       input(
+#         'enter the type of the value where 1 foor str 2 for int 3 for list and 4 for dectionary'
+#       ))
+#     if decvaluetype == 1:
+#       decvalue = input('enter the value:')
+#     elif decvaluetype == 2:
+#       decvalue = int(input('enter the value:'))
+#     elif decvaluetype == 3:
+#       decvalue = []
+#       times = int(input('how many' + deckey + 'o you have?'))
+#       for j in range(times):
+#         decvalue.append(input('enter the value' + deckey + ':'))
+#     elif decvaluetype == 4:
+#       decvalue = {}
+#       times = int(input('how many' + deckey + 'do you have'))
+#       for m in range(times):
+#         keynew = input('enter the key:')
+#         newvalue = input('enter the value')
+#         decvalue[keynew] = newvalue
+#     student[deckey] = decvalue
+#     anyvar = student
+#     students.append(student)
+#     continue0rnot = input('do you want to add another student?')
+#     if continue0rnot == 'no':
+#       reinter = False
 
-print(students)
+# print(students)
           
-class client:
+# class client:
 
-  def_init_(self, nameopj ='deafult', phoneopj=123456789, Emaiopj=, "mohd@gmail.com", puropj=5)
-  self.name = nameopj
-  self.phone = phoneopj 
-  self.email = Emailopj
-  self.purchies = propj
+#   def_init_(self, nameopj ='deafult', phoneopj=123456789, Emaiopj=, "mohd@gmail.com", puropj=5)
+#   self.name = nameopj
+#   self.phone = phoneopj 
+#   self.email = Emailopj
+#   self.purchies = propj
 
-  def_ str_(self):
-  print('hello')
-  return f'name is {self.name} and phone is {self phone} and mail is{self. email} and purchie'
+#   def_ str_(self):
+#   print('hello')
+#   return f'name is {self.name} and phone is {self phone} and mail is{self. email} and purchie'
 
 
-print ('hi to my program ')
-name = input('enter your name:') 
-age = int(input('enter your age:'))
-grade = int(input ('enter your grade:'))
-city = input('enter your city:')
-speacialise = input ('enter your speacialise')
-# pass the user input to the class
-student1= student(name,age,grade, city,speacialise)
-print('information added successfully')
-#added new course to the student course method 
-print("add new course ")
-course= input (enter the course name:')
-print(student1.addcorse(course))
-print(student1)
+# print ('hi to my program ')
+# name = input('enter your name:') 
+# age = int(input('enter your age:'))
+# grade = int(input ('enter your grade:'))
+# city = input('enter your city:')
+# speacialise = input ('enter your speacialise')
+# # pass the user input to the class
+# student1= student(name,age,grade, city,speacialise)
+# print('information added successfully')
+# #added new course to the student course method 
+# print("add new course ")
+# course= input (enter the course name:')
+# print(student1.addcorse(course))
+# print(student1)
+
+class Student:
+    def __init__(self,name='default',grade=1,age=18,city='riyadh',specalies='computer',password='123456'):
+      self.name=name
+      self.grade=grade
+      self.age=age
+      self.city=city
+      self.specalies=specalies
+      self.password=password
+
+    def __str__(self):
+        return f'name is {self.name} and age is {self.age} and grade is {self.grade}and city is {self.city}and specalies is {self.specalies}'
+        
+    def talk(self):
+        return f'hello my name is {self.name}'
+    def addcorse(self,newcourse):
+        print(self.talk())
+        return f'hello {self.name} you have added {newcourse} to your courses'
+
+Students=[]
+while True:
+    print('Welcome to my program')
+    print('1-login')
+    print('2-register')
+    print('3-exit')
+    userchoice=int(input('plesae enter your choice:'))
+    if userchoice==1:
+        print('Welcome to the login page')
+        while True :
+            username=input('please enter your username:')
+            password=input('please enter your password:')
+            for i in range (len(Students)):
+              if Students[i].name ==username and Students[i].password==password:
+                print('youre logged in succesfully!')
+                print(Students)
+                break
+              else:
+                  print('wrong username or password!')
+          #  another solution. 
+          # for student in Students:
+          # if student.name==username and student.password==password
+          # print('you logged in succesfully1') 
+    
+    elif userchoice==2:
+        name=input('enter your name:')
+        age=int(input('enter your age:'))
+        grade=int(input('enter your grade:'))
+        city=input('enter your city:')
+        specalies=input('enter your specialies:')
+        password= input('enter your password:')
+        student1=Student(name,age,grade,city,specalies,password)
+        Students.append(student1)
+        print('information added succesfully!')
+        print(student1)
+    elif userchoice==3:
+        break
+      
+       
+
           
