@@ -305,33 +305,75 @@
 
 #  class square:
 
-class Father:
-  def __init__(self,name,age,hairColor):
-    self.father=name
-    self.fatherage=age
-    self.haircolor=hairColor
+# class Father:
+#   def __init__(self,name,age,hairColor):
+#     self.father=name
+#     self.fatherage=age
+#     self.haircolor=hairColor
 
-    def talk(self):
-      return f'my name is {self.father}'
+#     def talk(self):
+#       return f'my name is {self.father}'
     
-class Mother:
-    def __init__(self,name,age,hairColor):
-      self.mother=name
-      self.motherage=age
-      self.haircolor=hairColor
-    def talk(self):
-     return f'my name is {self.mother}'   
+# class Mother:
+#     def __init__(self,name,age,hairColor):
+#       self.mother=name
+#       self.motherage=age
+#       self.haircolor=hairColor
+#     def talk(self):
+#      return f'my name is {self.mother}'   
  
-class Party:
-   def __str__(self,location):
-    self.location=location
+# class Party:
+#    def __str__(self,location):
+#     self.location=location
 
-   def __str__(self):
-     return self.location
+#    def __str__(self):
+#      return self.location
    
-class Son(Mother,Father,Party):
- 
-     
+# class Son(Mother,Father,Party):
+#  Data class : a calss that contains only data (fields,att) and no methods. 
+# 
+
+from tkinter import *
+# from tkinter import ttk
+# root = Tk()
+# frm = ttk.Frame(root, padding=10)
+# frm.grid()
+# def name():
+#     print("Hi from tkinter")
+# ttk.Label(frm, text="Hello world!").grid(column=2, row=0)
+# ttk.Button(frm, text="Quit", command=name()).grid(column=1, row=0)
+# root.mainloop()
+
+window= Tk()
+window.title=("welcome to likegeeks app")
+window.geometry('350x200')
+lbl=Label (window,text="Hello")
+lbl.grid(column=0,row=0)
+count1=0
+
+def clicked():
+    global count1
+    count1 +=1
+    print(count1)
+    lbl.configure(text=f'count = {count1}')
+
+def printinput():
+    inp=inputtxt.get(1.0,'end-1c')
+    lbl.config(text= "provided Input:"+inp)
+          
+    
+# input1= Entry(window,width=10)
+inputtxt=Text(window,height=5,width=20) 
+inputtxt.pack() 
+btn = Button(window,text='Click Me', command=clicked)
+btn.grid(column=1,row=0)
+window.mainloop()
+
+      
+
+
+
+
 
 
 
